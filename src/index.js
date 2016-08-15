@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/index.html', (req,res) =>{
-    res.sendFile(__dirname + '/' +  'index.html')
+    res.sendFile(__dirname + '/static/' +  'index.html')
 })
 
 app.get('/api/login', (req, res) => {

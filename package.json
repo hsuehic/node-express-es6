@@ -37,15 +37,14 @@
     "gulp-sequence": "^0.4.5",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7"
-
-
-
+    "gulp-util": "^3.0.7",
+    "node-inspector": "^0.12.8"
   },
   "scripts": {
     "test": "npm run test",
     "build": "babel src --out-dir dist",
-    "start": "babel-node src/index.js"
+    "start": "babel-node src/index.js",
+    "debug": "node-debug src/start.js"
   },
   "keywords": [
     "nodejs",
