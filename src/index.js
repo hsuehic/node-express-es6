@@ -3,19 +3,19 @@
  */
 
 import  express from 'express'
+import  path from 'path'
 
 let app = express()
 
 app.get('/', (req, res) => {
     "use strict"
-
     res.send('Hello World')
 })
 
-app.get('/index.html', (req,res) =>{
-    res.sendFile(__dirname + '/static/' +  'index.html')
-})
-
+let staticPath = path.resolve(__dirname + '/static')
+app.use(express.static(staticPath))
+console.log(staticPath)
+console.log(__dirname)
 app.get('/api/login', (req, res) => {
     let response = {
         username:req.query.username,
@@ -29,10 +29,5 @@ app.get('/api/login', (req, res) => {
 
 let server = app.listen(8081,() => {
     "use strict"
-
-    let host = server.address().address
-    console.log(host)
-    let port = server.address().port
-    console.log(port)
-    console.log(`Example app listening at http://${host}:${port}`)
+    console.log(__dirname)
 })

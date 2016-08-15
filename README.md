@@ -9,6 +9,18 @@ A template for Nodejs Express ES6 Application
 - Express
 
 ## Get Involved
+1. get the template
+```
+    git clone 
+```
+1. install gulp
+```JavaScript
+    npm i -g gulp
+```
+1. install nodemon
+``` JavaScript
+    npm i -g nodemon
+```
 
 1. start
 ```JavaScript
