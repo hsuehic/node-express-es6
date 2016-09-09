@@ -2,6 +2,7 @@
  * Created by Richard on 16/8/11.
  */
 
+import  http from 'http'
 import  express from 'express'
 import  path from 'path'
 
@@ -26,6 +27,24 @@ app.get('/api/login', (req, res) => {
     res.end(JSON.stringify(response))
 })
 
+app.get('/test', (req, res) => {
+    http.get({
+        hostname: 'www.baidu.com',
+        port: 80,
+        path: '/',
+        agent: false
+    },(resp) => {
+        res.send('Test over')
+        resp.on('data',(chunk) =>{
+            console.log(chunk)
+        })
+        resp.on('end', () => {
+            //res.send('end')
+            //res.end()
+            console.log('end')
+        })
+    })
+})
 
 let server = app.listen(8081,() => {
     "use strict"

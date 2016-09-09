@@ -13,7 +13,7 @@ A template for Nodejs Express ES6 Application
 ```
     git clone 
 ```
-1. install gulp
+1.  install gulp
 ```JavaScript
     npm i -g gulp
 ```

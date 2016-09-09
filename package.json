@@ -12,7 +12,11 @@
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
-    "multer": "^1.2.0"
+    "express-promise": "^0.4.0",
+    "multer": "^1.2.0",
+    "node-zookeeper-client": "^0.2.2",
+    "node-zookeeper-dubbo": "^2.1.0",
+    "zoodubbo": "^0.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
